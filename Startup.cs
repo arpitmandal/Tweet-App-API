@@ -30,8 +30,14 @@ namespace TweetApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //for MySql
             string mySqlConnectionStr = Configuration.GetConnectionString("ConnString");
             services.AddDbContextPool<TweetDbContext>(options => options.UseMySql(mySqlConnectionStr, ServerVersion.AutoDetect(mySqlConnectionStr)));
+
+            //for SQLServer
+            //var connStr = Configuration.GetConnectionString("ConnString");
+            //services.AddDbContext<TweetDbContext>(op => op.UseSqlServer(connStr));
+
 
             services.AddTransient<ITweetService, TweetService>();
             services.AddTransient<ITweetRepository, TweetRepository>();
