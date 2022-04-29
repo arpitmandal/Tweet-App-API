@@ -31,12 +31,12 @@ namespace TweetApp
         public void ConfigureServices(IServiceCollection services)
         {
             //for MySql
-            string mySqlConnectionStr = Configuration.GetConnectionString("ConnString");
-            services.AddDbContextPool<TweetDbContext>(options => options.UseMySql(mySqlConnectionStr, ServerVersion.AutoDetect(mySqlConnectionStr)));
+            //string mySqlConnectionStr = Configuration.GetConnectionString("ConnString");
+            //services.AddDbContextPool<TweetDbContext>(options => options.UseMySql(mySqlConnectionStr, ServerVersion.AutoDetect(mySqlConnectionStr)));
 
             //for SQLServer
-            //var connStr = Configuration.GetConnectionString("ConnString");
-            //services.AddDbContext<TweetDbContext>(op => op.UseSqlServer(connStr));
+            var connStr = Configuration.GetConnectionString("ConnString");
+            services.AddDbContext<TweetDbContext>(op => op.UseSqlServer(connStr));
 
 
             services.AddTransient<ITweetService, TweetService>();
