@@ -17,11 +17,11 @@ namespace TweetApp.Repositories
             this._dbContext = dbContext;
         }
 
-        public async Task<int> UserRegistration(User user)
+        public async Task<int> UserRegistration(Users user)
         {
             try
             {
-                this._dbContext.User.Add(user);
+                this._dbContext.Users.Add(user);
                 var result = await this._dbContext.SaveChangesAsync();
                 return result;
             }
@@ -31,11 +31,11 @@ namespace TweetApp.Repositories
             }
         }
 
-        public async Task<User> Login(string userName, string password)
+        public async Task<Users> Login(string userName, string password)
         {
             try
             {
-                var user = await this._dbContext.User.Where(e => e.Email == userName && e.Password == password).FirstOrDefaultAsync();
+                var user = await this._dbContext.Users.Where(e => e.Email == userName && e.Password == password).FirstOrDefaultAsync();
                 return user;
             }
             catch (Exception ex)
@@ -44,11 +44,11 @@ namespace TweetApp.Repositories
             }
         }
 
-        public async Task<User> EmailValidation(string email)
+        public async Task<Users> EmailValidation(string email)
         {
             try
             {
-                var user = await this._dbContext.User.Where(x => x.Email == email).FirstOrDefaultAsync();
+                var user = await this._dbContext.Users.Where(x => x.Email == email).FirstOrDefaultAsync();
                 return user;
             }
             catch (Exception ex)
@@ -62,7 +62,7 @@ namespace TweetApp.Repositories
             try
             {
                 int response = 0;
-                var result = await this._dbContext.User.Where(s => s.Email == email).FirstOrDefaultAsync();
+                var result = await this._dbContext.Users.Where(s => s.Email == email).FirstOrDefaultAsync();
                 if (result != null)
                 {
                     result.Password = newPassword;
@@ -84,7 +84,7 @@ namespace TweetApp.Repositories
             try
             {
                 int response = 0;
-                var result = await this._dbContext.User.Where(s => s.Email == email && s.Password == oldPassword).FirstOrDefaultAsync();
+                var result = await this._dbContext.Users.Where(s => s.Email == email && s.Password == oldPassword).FirstOrDefaultAsync();
                 if (result != null)
                 {
                     result.Password = newPassword;
@@ -100,9 +100,9 @@ namespace TweetApp.Repositories
             }
         }
 
-        public async Task<IList<User>> GetAllUsers()
+        public async Task<IList<Users>> GetAllUsers()
         {
-            var result = await this._dbContext.User.Select(p => new User
+            var result = await this._dbContext.Users.Select(p => new Users
             {
                 First_Name = p.First_Name,
                 Last_Name = p.Last_Name,

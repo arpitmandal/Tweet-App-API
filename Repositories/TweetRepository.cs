@@ -22,7 +22,7 @@ namespace TweetApp.Repositories
             try
             {
                 var tweets = await (from tweet in context.Tweets
-                                    join user in context.User on tweet.UserId equals user.Id
+                                    join user in context.Users on tweet.UserId equals user.Id
                                     where user.Email == userName
                                     select new Tweets
                                     {
@@ -46,7 +46,7 @@ namespace TweetApp.Repositories
             try
             {
                 var tweetList = await (from tweet in context.Tweets
-                                       join user in context.User on tweet.UserId equals user.Id
+                                       join user in context.Users on tweet.UserId equals user.Id
                                        select new Tweets
                                        {
                                            Id = tweet.Id,
@@ -69,6 +69,7 @@ namespace TweetApp.Repositories
             try
             {
                 tweet.CreatedOn = DateTime.UtcNow;
+                tweet.ModifiedOn = DateTime.UtcNow;
                 this.context.Tweets.Add(tweet);
                 var result = await this.context.SaveChangesAsync();
                 return result;

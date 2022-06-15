@@ -2,7 +2,7 @@
 
 namespace TweetApp.Entites
 {
-    public class User
+    public class Users
     {
         public int Id { get; set; }
         public string First_Name { get; set; }

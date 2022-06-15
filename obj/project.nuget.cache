@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/60rOHQmUYUEsdVwzAw5bfAsLfBuB9iNl0i9RHbew2OrqtGevub1O8hoG/uVQq74jn0yFKSuplC3uoDKc0bweQ==",
+  "dgSpecHash": "SvlX2yyl9UhFKC/rmBQxO+/s1o0NcBTa9jjy7Q2sRs1mv8KfOCWShjDcWYUKofvhcg0GJnNAF5/JIdBcLaK3HQ==",
   "success": true,
   "projectFilePath": "/Users/arpitmandal/Desktop/Project/Tweet App API/TweetApp.csproj",
   "expectedPackageFiles": [
@@ -172,7 +172,10 @@
     "/Users/arpitmandal/.nuget/packages/system.xml.readerwriter/4.3.0/system.xml.readerwriter.4.3.0.nupkg.sha512",
     "/Users/arpitmandal/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512",
     "/Users/arpitmandal/.nuget/packages/system.xml.xmldocument/4.3.0/system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "/Users/arpitmandal/.nuget/packages/system.xml.xmlserializer/4.3.0/system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "/Users/arpitmandal/.nuget/packages/system.xml.xmlserializer/4.3.0/system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "/Users/arpitmandal/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.10/microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "/Users/arpitmandal/.nuget/packages/microsoft.netcore.app.host.osx-x64/3.1.25/microsoft.netcore.app.host.osx-x64.3.1.25.nupkg.sha512",
+    "/Users/arpitmandal/.nuget/packages/microsoft.netcore.app.ref/3.1.0/microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
   ],
   "logs": []
 }

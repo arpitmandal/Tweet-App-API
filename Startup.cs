@@ -51,6 +51,7 @@ namespace TweetApp
                options.AllowAnyOrigin()
                       .AllowAnyMethod()
                      .AllowAnyHeader());
+
             });
 
             services.AddControllers();

@@ -15,7 +15,7 @@ namespace TweetApp.Services
             this._accountRepository = accountRepository;
         }
 
-        public async Task<string> UserRegistration(User user)
+        public async Task<string> UserRegistration(Users user)
         {
             string message;
 
@@ -41,9 +41,9 @@ namespace TweetApp.Services
 
             return message;
         }
-        public async Task<User> Login(string userName, string password)
+        public async Task<Users> Login(string userName, string password)
         {
-            User user = await this._accountRepository.Login(userName, password);
+            Users user = await this._accountRepository.Login(userName, password);
             return user;
         }
         public async Task<string> ForgotPassword(string email, string newPassword)
@@ -85,7 +85,7 @@ namespace TweetApp.Services
             return message;
         }
 
-        public async Task<IList<User>> GetAllUsers()
+        public async Task<IList<Users>> GetAllUsers()
         {
             var result = await this._accountRepository.GetAllUsers();
             return result;

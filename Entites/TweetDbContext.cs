@@ -8,7 +8,7 @@ namespace TweetApp.Entites
             : base(options)
         {
         }
-        public DbSet<User> User { get; set; }
+        public DbSet<Users> Users { get; set; }
         public DbSet<Tweets> Tweets { get; set; }
     }
 }

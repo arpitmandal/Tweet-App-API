@@ -32,7 +32,7 @@ namespace TweetApp.Controllers
         [HttpPost]
         [Route("register")]
         [AllowAnonymous]
-        public async Task<IActionResult> UserRegistration([FromBody] User user)
+        public async Task<IActionResult> UserRegistration([FromBody] Users user)
         {
             try
             {

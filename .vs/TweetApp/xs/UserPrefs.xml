@@ -1,17 +1,25 @@
 ﻿<Properties StartupConfiguration="{7B2A833A-BDB5-43ED-BED2-6B1960348852}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Properties/launchSettings.json">
+  <MonoDevelop.Ide.Workbench ActiveDocument="docker-compose.yml">
     <Files>
-      <File FileName="Program.cs" Line="32" Column="26" />
-      <File FileName="Startup.cs" />
-      <File FileName="appsettings.json" />
-      <File FileName="Properties/launchSettings.json" Line="31" Column="1" />
+      <File FileName="Repositories/TweetRepository.cs" Line="52" Column="28" />
+      <File FileName="Controllers/TweetController.cs" />
+      <File FileName="Services/TweetService.cs" />
+      <File FileName="Entites/Tweets.cs" />
+      <File FileName="Repositories/UserRepository.cs" />
+      <File FileName="appsettings.json" Line="10" Column="31" />
+      <File FileName="Dockerfile" Line="1" Column="1" />
+      <File FileName="docker-compose.yml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="TweetApp" expanded="True">
-            <Node name="TweetApp" expanded="True" selected="True">
-              <Node name="Properties" expanded="True" />
+            <Node name="TweetApp" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Entites" expanded="True" />
+              <Node name="Repositories" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="docker-compose.yml" selected="True" />
             </Node>
           </Node>
         </State>
